@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4fdbd44c12d8d8a00f6801bbd7975a5",
+    "content-hash": "5a8dfa44a40fcadd638c58d3dae7ae1b",
     "packages": [
         {
             "name": "amentotech/laraguppy",
