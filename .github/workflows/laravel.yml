@@ -23,6 +23,12 @@ jobs:
           php-version: '8.2' 
           tools: 'composer'
 
+    - name: Make fir cache
+      run: mkdir -p storage/framework/cache
+    - name: Make dir sessions
+      run: mkdir -p storage/framework/sessions
+    - name: Make dir views
+      run: mkdir -p storage/framework/views
     - name: Install PHP dependencies
       run: composer install --no-dev --optimize-autoloader
         
