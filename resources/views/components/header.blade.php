@@ -41,7 +41,6 @@
                             <div id="tenavbar" class="collapse navbar-collapse">
                                 <ul class="navbar-nav tk-navbarnav">
                                     @if( !empty($headerMenu) && $headerMenu->count() > 0 )
-                                        {{$headerMenu}}
                                         @foreach( $headerMenu as $menu)
                                             <x-menu-item :menu="$menu" />
                                         @endforeach
