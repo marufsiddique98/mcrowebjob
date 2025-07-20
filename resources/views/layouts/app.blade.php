@@ -20,9 +20,7 @@
 
         <x-meta-content :OgContent="$OgContent ?? null" :siteName="$siteTitle ?? null" :page="$page ?? null" :title="$title ?? null"/>
 
-        @if( !empty($siteFavicon) )
-            <link rel="icon" href="{{ asset('storage/'.$siteFavicon) }}" type="image/x-icon">
-        @endif
+        <link rel="icon" href="{{ asset('images/site-favicon.png') }}" type="image/x-icon">
         <script defer src="{{ asset('js/main.js')}}"></script>
         @vite([
             'public/common/css/bootstrap.min.css',
