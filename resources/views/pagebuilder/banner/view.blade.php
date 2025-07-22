@@ -76,7 +76,7 @@
             </div>
         @endif    
     </div>
-
+    
     @if(pagesetting('media_type') == 'image')
         @if(pagesetting('media_frame') == 'yes')
             <div class="tk-bannerframe">
@@ -87,10 +87,10 @@
                     @endif
                 </div>
             </div>
-        @elseif(!empty(pagesetting('image')))
-            <figure>
-                <img src="{{asset('storage/'.pagesetting('image')[0]['path'])}}" alt="frame">
-            </figure>
+        @else
+        <figure>
+            <img src="{{ asset('images/banner.jpg') }}" alt="frame">
+        </figure>
         @endif
     @endif
 

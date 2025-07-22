@@ -26,13 +26,7 @@
                 <div class="col-12">
                     <div class="tk-headerwrap">
                         <div class="tk-logo">
-                            @if(getLogoVariation($page ?? null))
-                                <a href="{{ url('/')}}"><img src="{{asset('demo-content/'. getLogoVariation($page ?? null))}}" alt="{{ __('general.logo') }}" /></a>
-                            @elseif( !empty($siteLogo) )
-                                <a href="{{ url('/')}}"><img src="{{asset('storage/'.$siteLogo)}}" alt="{{ __('general.logo') }}" /></a>
-                            @else
-                                <a href="{{ url('/')}}"><img src="{{asset('demo-content/logo.png')}}" alt="{{ __('general.logo') }}" /></a>
-                            @endif
+                            <a href="{{ url('/')}}"><img src="{{asset('images/logo.png')}}" alt="{{ __('general.logo') }}" /></a>
                         </div>
                         <nav class="tk-navbar navbar-expand-xl">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tenavbar" aria-expanded="false" aria-label="Toggle navigation">

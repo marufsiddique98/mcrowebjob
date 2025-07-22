@@ -4,11 +4,7 @@
 			<div class="row">
 				<div class="col-12 col-lg-7 col-xl-4">
 					<div class="tk-footer_info">
-						@if( !empty(setting('_site.site_lite_logo')) )
-                            <strong class="tk-footerlogo"><a href="{{ url('/')}}"><img src="{{asset('storage/'.setting('_site.site_lite_logo')[0]['path'])}}" alt="{{ __('general.logo') }}" /></a></strong>
-                        @else
-                            <strong ><a href="{{ url('/')}}"><img src="{{asset('demo-content/logo.png')}}" alt="{{ __('general.logo') }}" /></a></strong>
-                        @endif
+                            <strong class="tk-footerlogo"><a href="{{ url('/')}}"><img src="{{asset('images/logo.png')}}" alt="{{ __('general.logo') }}" /></a></strong>
 						@if(!empty(setting('_site.footer_text')))
 							<div class="tk-description">
 								<p>{!! nl2br(setting('_site.footer_text')) !!}</p>

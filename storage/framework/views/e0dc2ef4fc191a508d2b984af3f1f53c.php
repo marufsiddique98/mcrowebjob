@@ -1,0 +1,70 @@
+<div class="col-lg-8 col-xl-9" wire:init="loadSellers" >
+    <div class="tk-section-holder" wire:loading.class="tk-section-preloader" wire:target="selected_skills,keyword,languages,english_level,seller_type,selected_location,order_by">
+        <div class="preloader-outer" wire:loading  wire:target="selected_skills,keyword,languages,english_level,seller_type,selected_location,order_by">
+            <div class="tk-preloader">
+                <img class="fa-spin" src="<?php echo e(asset('images/loader.png')); ?>" >
+            </div>
+        </div>
+        <?php if( !empty($isloadedPage) ): ?>
+            <?php if( !$sellers->isEmpty() ): ?>
+                <?php $__currentLoopData = $sellers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $single): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php if (isset($component)) { $__componentOriginal877bd88537af51d47849799b369214b6 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal877bd88537af51d47849799b369214b6 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.seller-item','data' => ['profile' => $single,'userRole' => $roleName,'currencySymbol' => $currency_symbol,'isSaveItem' => false,'addressFormat' => $address_format]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('seller-item'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['profile' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($single),'user_role' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($roleName),'currency_symbol' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($currency_symbol),'is_save_item' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(false),'address_format' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($address_format)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal877bd88537af51d47849799b369214b6)): ?>
+<?php $attributes = $__attributesOriginal877bd88537af51d47849799b369214b6; ?>
+<?php unset($__attributesOriginal877bd88537af51d47849799b369214b6); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal877bd88537af51d47849799b369214b6)): ?>
+<?php $component = $__componentOriginal877bd88537af51d47849799b369214b6; ?>
+<?php unset($__componentOriginal877bd88537af51d47849799b369214b6); ?>
+<?php endif; ?>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php else: ?>
+                <div class="tk-submitreview">
+                    <figure>
+                        <img src="<?php echo e(asset('images/empty.png')); ?>" alt="<?php echo e(__('general.no_record')); ?>">
+                    </figure>
+                    <h4><?php echo e(__('general.no_record')); ?></h4>
+                </div>
+            <?php endif; ?> 
+            <?php if(!$sellers->isEmpty()): ?>
+                <div class="col-sm-12">
+                    <?php echo e($sellers->links('pagination.custom')); ?>
+
+                </div>
+            <?php endif; ?>
+        <?php else: ?>
+            <?php if (isset($component)) { $__componentOriginal97bf162adef7a6114d109b6aa5102e22 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal97bf162adef7a6114d109b6aa5102e22 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.search-skeleton','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('search-skeleton'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal97bf162adef7a6114d109b6aa5102e22)): ?>
+<?php $attributes = $__attributesOriginal97bf162adef7a6114d109b6aa5102e22; ?>
+<?php unset($__attributesOriginal97bf162adef7a6114d109b6aa5102e22); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal97bf162adef7a6114d109b6aa5102e22)): ?>
+<?php $component = $__componentOriginal97bf162adef7a6114d109b6aa5102e22; ?>
+<?php unset($__componentOriginal97bf162adef7a6114d109b6aa5102e22); ?>
+<?php endif; ?>    
+        <?php endif; ?>
+    </div>
+</div>
+<?php /**PATH /home/sharif/Desktop/Laravel Project/mcrowebjob/resources/views/livewire/components/search-sellers.blade.php ENDPATH**/ ?>
