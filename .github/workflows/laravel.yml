@@ -23,6 +23,8 @@ jobs:
           php-version: '8.2' 
           tools: 'composer'
 
+    - name: Composer install
+      run: composer update
     - name: Make fir cache
       run: mkdir -p storage/framework/cache
     - name: Make dir sessions
